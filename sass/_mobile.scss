@@ -1,0 +1,55 @@
+//   Widescreens
+@include mediaXl {
+}
+
+
+//   Desktops & Leftops
+@include mediaLg {
+}
+
+
+//   Tablets & Small Leftops
+@include mediaMd {
+  .hero-section {
+    align-items: center;
+    text-align: center;
+  }
+
+  .menu {
+    .menu-branding,
+    .menu-nav {
+      float: none;
+      width: 100%;
+      min-height: 0;
+
+      &.show {
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    .menu-nav {
+      height: 75vh;
+      // Slide from Right
+      transform: translate3d(-100%, 0, 0);
+    }
+    .menu-branding {
+      height: 25vh;
+      // Slide from Left
+      transform: translate3d(100%, 0, 0);
+    }
+    img{
+        width: 100px;
+        height: 100px;
+    }
+  }
+}
+
+
+//   Smartphones
+@include mediaSm {
+  .hero-section {
+    .lg-heading {
+      margin-top: 10vh;
+    }
+  }
+}
